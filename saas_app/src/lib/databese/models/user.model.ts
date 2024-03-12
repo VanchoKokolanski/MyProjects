@@ -1,16 +1,5 @@
 import { Schema, model, models } from "mongoose";
 
-export interface UserSchemaType extends Document {
-  clerkId: string;
-  email: string;
-  username: string;
-  photo: string;
-  firstName?: string;
-  lastName?: string;
-  planId?: number;
-  creditBalance?: number;
-}
-
 const UserSchema = new Schema({
   clerkId: {
     type: String,
@@ -46,6 +35,7 @@ const UserSchema = new Schema({
     default: 10,
   },
 });
+
 const User = models?.User || model("User", UserSchema);
 
 export default User;
