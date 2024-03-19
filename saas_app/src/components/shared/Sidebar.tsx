@@ -2,13 +2,14 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { SignIn, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import {SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { navLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
 
 const Sidebar = () => {
   const pathname = usePathname();
+ 
   return (
     <aside className="sidebar">
       <div className="flex size-full flex-col gap-4">
